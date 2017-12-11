@@ -27,13 +27,13 @@ class FuzzyClock(object):
             return "viddel no"
         elif self.m < 23:
             return "twintig no"
-        elif self.m < 28:
+
+        self.h += 1
+        if self.m < 28:
             return "kort vör halv"
         elif self.m < 32:
             return "halv"
-        self.h += 1
-
-        if self.m < 37:
+        elif self.m < 37:
             return "kort no halv"
         elif self.m < 42:
             return "twintig vör"
